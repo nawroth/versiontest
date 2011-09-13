@@ -31,9 +31,6 @@
           </execution>
         </executions>
         <configuration>
-          <prefix>git</prefix>
-          <dateFormat>dd.MM.yyyy '@' HH:mm:ss z</dateFormat>
-          <verbose>true</verbose>
           <dotGitDirectory>${project.basedir}/../.git</dotGitDirectory>
         </configuration>
       </plugin>
@@ -48,10 +45,7 @@
                   <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                 </manifest>
                 <manifestEntries>
-                  <Implementation-Title>${project.name}</Implementation-Title>
-                  <Implementation-Version>${project.version}</Implementation-Version>
-                  <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
-                  <Implementation-Vendor>${project.organization.name}</Implementation-Vendor>
+                  <Implementation-Version-Id>${git.commit.id}</Implementation-Version-Id>
                   <Url>${project.organization.url}</Url>
                 </manifestEntries>
               </archive>
