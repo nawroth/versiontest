@@ -5,7 +5,6 @@
   <version>${build.version}</version>
   <packaging>pom</packaging>
 
-
   <properties>
     <release.series>1.5</release.series>
     <build.number>-SNAPSHOT</build.number>
