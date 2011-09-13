@@ -20,9 +20,9 @@
   <build>
     <plugins>
       <plugin>
-        <groupId>pl.project13.maven</groupId>
+        <groupId>com.nawroth.3rdparty.pl.project13.maven</groupId>
         <artifactId>git-commit-id-plugin</artifactId>
-        <version>1.8</version>
+        <version>1.9-SNAPSHOT</version>
         <executions>
           <execution>
             <goals>
@@ -45,7 +45,7 @@
                   <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                 </manifest>
                 <manifestEntries>
-                  <Implementation-Version-Id>${git.commit.id}</Implementation-Version-Id>
+                  <Implementation-Version-Id>${git.commit.id.modified}</Implementation-Version-Id>
                   <Implementation-Version-Time>${git.commit.time}</Implementation-Version-Time>
                   <Implementation-Version-Branch>${git.branch}</Implementation-Version-Branch>
                   <Url>${project.organization.url}</Url>
@@ -87,6 +87,19 @@
                     <groupId>pl.project13.maven</groupId>
                     <artifactId>git-commit-id-plugin</artifactId>
                     <versionRange>[1.8,)</versionRange>
+                    <goals>
+                      <goal>revision</goal>
+                    </goals>
+                  </pluginExecutionFilter>
+                  <action>
+                    <ignore></ignore>
+                  </action>
+                </pluginExecution>
+                <pluginExecution>
+                  <pluginExecutionFilter>
+                    <groupId>com.nawroth.3rdparty.pl.project13.maven</groupId>
+                    <artifactId>git-commit-id-plugin</artifactId>
+                    <versionRange>[1.9-SNAPSHOT,)</versionRange>
                     <goals>
                       <goal>revision</goal>
                     </goals>
