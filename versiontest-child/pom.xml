@@ -46,6 +46,8 @@
                 </manifest>
                 <manifestEntries>
                   <Implementation-Version-Id>${git.commit.id}</Implementation-Version-Id>
+                  <Implementation-Version-Time>${git.commit.time}</Implementation-Version-Time>
+                  <Implementation-Version-Branch>${git.branch}</Implementation-Version-Branch>
                   <Url>${project.organization.url}</Url>
                 </manifestEntries>
               </archive>
